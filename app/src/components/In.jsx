@@ -1,35 +1,36 @@
 import React , {useState} from "react";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import "../style/log.css"
 function In() {
-    let [inpp, setinpp] = useState("")
-    let [inp, setinp] = useState("")
-    let [inp2, setinp2] = useState("")
-
-    function iss() {
+    let [inpp, setInpp] = useState("")
+    let [inp, setInp] = useState("")
+    let [inp2, setInp2] = useState("")
+    function iss(e) {
+        e.preventDefault()
         let ss = JSON.stringify(inpp)
         localStorage.setItem("ssm", ss)
         
-        if ( inp=== inp2 ) {
+        if ( inp === inp2 ) {
             let sss = JSON.stringify(inp)
             localStorage.setItem("ssm2", sss)
         } else {
-            alert("erore input")
-        }
-        
-        
-
-
+            alert("erors password")
+        }   
+    }
+    function notRotate(e) {
+        e.preventDefault()
     }
         return (
-            <div className="log">
+                <div className="log">
                 <form>
-                    <input type="text" placeholder="User_Name"  onChange={(e) => setinpp(e.target.value)}/>
-                    <input type="password" placeholder="Password" onChange={(e) => setinp(e.target.value)}/>
-                    <input type="password" placeholder="Password" onChange={(e) => setinp2(e.target.value)}/>
-                    <button onClick={iss}>
+                    <input type="text" placeholder="User_Name"  onChange={(e) => setInpp(e.target.value)}/>
+                    <input type="password" placeholder="Password" onChange={(e) => setInp(e.target.value)}/>
+                    <input type="password" placeholder="Password" onChange={(e) => setInp2(e.target.value)}/>
+                    <hr/>
+                    <button type="button" onClick={iss}>
                         submite
                     </button>
-                    <button>
+                    <button onClick={notRotate}>
                         <Link to="/log">
                             sing up
                         </Link>

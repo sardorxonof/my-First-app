@@ -1,12 +1,12 @@
 import React from "react";
-
+import "../style/cads.css"
 function Carders() {
     return (
-        <div>
-            <h1>Lorem.</h1>
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure facilis, ipsum aliquam atque quaerat modi consequuntur fugiat tenetur dignissimos animi nam possimus repellendus sapiente molestiae, magnam nemo illum neque!
-            </p>
+        <div className="card">
+            <div className="cards">
+                <input type="text" placeholder="Title" minLength="10" maxLength="15" />
+                <textarea cols="80" rows="10" placeholder="Text"></textarea>
+            </div>
         </div>
     )
 }

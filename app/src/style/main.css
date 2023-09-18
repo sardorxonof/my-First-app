@@ -1,7 +1,13 @@
-body {
-    background: url(https://t3.ftcdn.net/jpg/05/66/27/56/360_F_566275602_ewJ3sgEV27DQhETyuen8JHrVFM90rBhm.jpg) no-repeat;
-    background-size: cover;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
     color: snow;
+}
+body {
+    background: url(../img/2.gif) no-repeat;
+    background-size: cover;
 }
 .main {
     width: 100%;
@@ -10,7 +16,7 @@ body {
 nav {
     width: 100%;
     padding: 2px;
-    background-color: black;
+    background:linear-gradient( 50deg , rgba(255, 0, 255, 0.412) , rgba(0, 255, 255, 0.602) ) ;
     display: flex;
     justify-content: space-between;
 }
@@ -20,5 +26,5 @@ a {
     padding: 10px;
 }
 a:hover {
-    color: red;
+    color: rgb(14, 195, 14);
 }
